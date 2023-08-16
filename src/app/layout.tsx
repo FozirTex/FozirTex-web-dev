@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Container, SSRProvider } from "@/components/bootstrap";
 import NavBar from "./NavBar";
+import styles from "@/app/_global-layout.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <SSRProvider>
           <NavBar />
-          <main>
+          <main className={styles["base"]}>
             <Container className="py-4">{children}</Container>
           </main>
         </SSRProvider>

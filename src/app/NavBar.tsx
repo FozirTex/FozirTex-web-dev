@@ -1,34 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { usePathname } from "next/navigation";
+import styles from "@/styles/_NavBars.module.scss";
 
 export default function NavBar() {
-  const pathname = usePathname();
+
 
   return (
-    <Navbar
-      bg="primary"
-      variant="white"
-      sticky="top"
-      expand="sm"
-      collapseOnSelect
-    >
-      <Container>
-        {/* <Navbar.Brand href="/">Home</Navbar.Brand> bad practice cuz it re-renders the whole page every time */}
-        <Navbar.Brand as={Link} href="/">
-          BANG THAT SHIT
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="main-navbar" />
-        <Navbar.Collapse id="main-navbar">
-          <Nav>
-            <Nav.Link as={Link} href="/about" active={pathname === "/abou-us"}>
-              About Us
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <header className={styles["navbar-container"]}>
+      <h1>FZT logo</h1>
+    </header>
   );
 }
