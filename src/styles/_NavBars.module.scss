@@ -1,3 +1,28 @@
-.navbar-container {
-    background-color: blue;
+@use '@/styles/base/_colors.module.scss' as base;
+
+@mixin alignBigThree($d_type, $jc_type, $ai_type) {
+    display: $d_type;
+    justify-content: $jc_type;
+    align-items: $ai_type;
+}
+
+.navbar-body {
+    width: 100vw;
+    padding: 1rem; //16px
+    background-color: base.$primary-bg;
+    @include alignBigThree(flex, space-between, center)
+}
+
+.logo-border {
+    width: fit-content;
+    border: 1px solid grey;
+}
+
+.ham-toggle-btn {
+    border: none;
+    background: transparent;
+}
+
+.nav-open {
+    display: none;
 }

@@ -1,11 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_TC } from "next/font/google";
 import { Container, SSRProvider } from "@/components/bootstrap";
 import NavBar from "./NavBar";
-import styles from "@/app/_global-layout.module.scss";
+import styles from "@/styles/_global-layout.module.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const noto_tc = Noto_Sans_TC({
+  subsets: ["latin"],
+  weight: ["100", "400", "700", "900"]
+});
 
 export const metadata: Metadata = {
   title: "FozirTex | Download BadX app",
@@ -34,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${styles["body"]}, ${noto_tc.className}`}>
         <SSRProvider>
           <NavBar />
           <main className={styles["base"]}>
