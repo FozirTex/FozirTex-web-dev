@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_TC } from "next/font/google";
 import NavBar from "../components/NavBar";
 import styles from "@/styles/_global-layout.module.scss";
+import Footer from "../components/Footer";
 
 const noto_tc = Noto_Sans_TC({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
         <main className={styles["base"]}>
           <div className="py-4">{children}</div>
         </main>
+        <Footer />
       </body>
     </html>
   );

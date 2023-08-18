@@ -1,0 +1,35 @@
+@use "@/styles/base/_colors.module.scss" as base;
+
+@mixin alignBigThree($d_type, $jc_type, $ai_type) {
+  display: $d_type;
+  justify-content: $jc_type;
+  align-items: $ai_type;
+}
+
+.footer-body {
+  width: 100vw;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid gold;
+  @include alignBigThree(flex, space-evenly, flex-start);
+}
+
+.footer-body > * {
+  border: 1px solid grey;
+}
+
+.footer-left {
+  width: 30vw;
+}
+
+.footer-right {
+  width: 70vw;
+  padding: 1rem 0.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-right > * {
+  border: 1px solid grey;
+}
