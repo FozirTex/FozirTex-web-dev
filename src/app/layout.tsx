@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_TC } from "next/font/google";
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
 import styles from "@/styles/_global-layout.module.scss";
 
 const noto_tc = Noto_Sans_TC({

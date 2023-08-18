@@ -9,13 +9,14 @@ import lan_switch_icon from "../../public/language-switcher.svg";
 import { useState } from "react";
 
 export default function NavBar() {
-  const [isNavOpen, setIsNavOpen] = useState(false); // state to control nav visibility
+  const [isNavOpen, setIsNavOpen] = useState(true); // state to control nav visibility
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen); // Toggle the state value
     console.log("menu opened !");
   };
 
+  // dropdown menu text
   const menuNames = [
     "晝夜切換",
     "語言切換",
@@ -77,11 +78,11 @@ export default function NavBar() {
           <hr className={`${styles["solid"]} ${styles["divider"]}`} />
         </div>
         <div className={styles["nav-links"]}>
-        <Link href="/about-us">{menuNames[7]}</Link>
+          <Link href="/about-us">{menuNames[7]}</Link>
           <hr className={`${styles["solid"]} ${styles["divider"]}`} />
         </div>
         <div className={styles["nav-links"]}>
-        <Link href="/about-us">{menuNames[8]}</Link>
+          <Link href="/about-us">{menuNames[8]}</Link>
         </div>
       </div>
     </>
