@@ -1,9 +1,10 @@
 @use "@/styles/base/_colors.module.scss" as base;
 
 .body {
+  margin: 0;
   background: base.$primary-bg;
   height: 100vh;
-  border: 1px solid grey;
-  font-family: "Kanit", sans-serif;
   font-family: "Noto Sans TC", sans-serif;
+  padding-top: 6.1rem;
+  // border: 1px solid black;
 }

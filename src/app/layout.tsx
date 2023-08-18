@@ -1,13 +1,11 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
 import { Noto_Sans_TC } from "next/font/google";
-import { Container, SSRProvider } from "@/components/bootstrap";
 import NavBar from "./NavBar";
 import styles from "@/styles/_global-layout.module.scss";
 
 const noto_tc = Noto_Sans_TC({
   subsets: ["latin"],
-  weight: ["100", "400", "700", "900"]
+  weight: ["100", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -37,13 +35,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${styles["body"]}, ${noto_tc.className}`}>
-        <SSRProvider>
-          <NavBar />
-          <main className={styles["base"]}>
-            <Container className="py-4">{children}</Container>
-          </main>
-        </SSRProvider>
+      <body className={`${styles["body"]} ${noto_tc.className}`}>
+        <NavBar />
+        <main className={styles["base"]}>
+          <div className="py-4">{children}</div>
+        </main>
       </body>
     </html>
   );

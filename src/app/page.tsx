@@ -1,5 +1,7 @@
+import styles from "@/styles/_Home.module.scss";
+
 export default function Home() {
   return (
-    <div>Home Page / Index Page</div>
+    <div className={styles["home-body"]}>Home Page / Index Page</div>
   );
 }
