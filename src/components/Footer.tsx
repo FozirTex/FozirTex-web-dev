@@ -10,6 +10,7 @@ export default function Footer() {
 
   return (
     <div className={styles["footer-body"]}>
+      
       <div className={styles["footer-left"]}>
         <div className={styles["fzt-logo-div"]}>
           <Image
@@ -19,6 +20,7 @@ export default function Footer() {
           />
         </div>
       </div>
+
       <div className={styles["footer-right"]}>
         <div className={styles["sub-sections"]}>{ftrTitles[0]}</div>
         <div className={styles["sub-sections"]}>{ftrTitles[1]}</div>
