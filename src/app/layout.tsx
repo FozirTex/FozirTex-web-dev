@@ -39,7 +39,7 @@ export default function RootLayout({
       <body className={`${styles["body"]} ${noto_tc.className}`}>
         <NavBar />
         <main className={styles["base"]}>
-          <div className="py-4">{children}</div>
+          <div className={styles[""]}>{children}</div>
         </main>
         <Footer />
       </body>

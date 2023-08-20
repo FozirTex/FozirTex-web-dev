@@ -7,10 +7,8 @@
 }
 
 .footer-body {
-  width: 100vw;
-  margin: 0;
-  position: absolute;
-  bottom: 0;
+  max-width: 100vw;
+  margin-top: auto;
   border: 1px solid gold;
   @include alignBigThree(flex, space-evenly, flex-start);
 }
@@ -20,16 +18,40 @@
 }
 
 .footer-left {
-  width: 30vw;
+  width: 30%;
 }
 
 .footer-right {
-  width: 70vw;
-  padding: 1rem 0.5rem;
+  width: 70%;
+  padding: 0 0.5rem 1rem 0.5rem;
   display: flex;
   align-items: flex-start;
 }
 
 .footer-right > * {
   border: 1px solid grey;
+  margin: 0 0.25rem;
+}
+
+.cata-sections {
+  display: block;
+}
+
+.cata-sections .cata-titles {
+  font-weight: bold;
+  color: base.$logo-color;
+}
+
+.sub-links {
+  display: block;
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.sub-links div {
+  margin: 0.25rem 0;
+}
+
+.sub-links Link {
+  text-decoration: none;
 }

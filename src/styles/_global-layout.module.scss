@@ -2,9 +2,13 @@
 
 .body {
   margin: 0;
-  background: base.$primary-bg;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // min-height + display + flex-direction can bottom the footer,
+  // also make sure add a margin-top: auto to the footer
   font-family: "Noto Sans TC", sans-serif;
   padding-top: 6.1rem;
+  background: base.$primary-bg;
   // border: 1px solid black;
 }
