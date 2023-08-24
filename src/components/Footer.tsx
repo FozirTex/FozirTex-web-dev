@@ -38,9 +38,7 @@ export default function Footer() {
       <div className={styles["footer-right"]}>
         {/* cata group 1 */}
         <div className={styles["cata-group"]}>
-          <div className={styles["cata-sections"]}>
-            {" "}
-            {/* 探索 */}
+          <div className={styles["cata-sections"]}> {/* 探索 */}
             <div className={styles["cata-titles"]}>{ftrTitles[0]}</div>
             <div className={styles["sub-links"]}>
               <div>
@@ -54,9 +52,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className={styles["cata-sections"]}>
-            {" "}
-            {/* 協助 */}
+          <div className={styles["cata-sections"]}> {/* 協助 */}
             <div className={styles["cata-titles"]}>{ftrTitles[1]}</div>
             <div className={styles["sub-links"]}>
               <div>
@@ -83,8 +79,7 @@ export default function Footer() {
             </div>
           </div>
           <div
-            className={`${styles["cata-sections"]} ${styles["contact-us-section"]}`}
-          > {/* 聯絡我們 */}
+            className={`${styles["cata-sections"]} ${styles["contact-us-section"]}`}>
             <div className={styles["cata-titles"]}>{ftrTitles[3]}</div>
             <div className={styles["sub-links"]}>
               <div>
