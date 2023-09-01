@@ -3,17 +3,19 @@
 @import "common";
 
 .container {
-  background: linear-gradient(180deg, #CFDDEE 0%, rgba(255, 255, 255, 0.00) 100%);
   main {
-    @include container();
   }
 }
 
 .banner {
+  background: linear-gradient(180deg, #CFDDEE 0%, rgba(255, 255, 255, 0.00) 100%);
   padding-top: 164px;
   //border: 1px solid #9F9F9F;
-  display: flex;
-  justify-content: space-between;
+  &_inner {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+  }
   &_start {
     max-width: 550px;
     h1 {
@@ -41,5 +43,26 @@
   }
   &_end {
 
+  }
+}
+
+.download {
+  @include container();
+  padding: 260px 0;
+  &_text {
+    color: #000;
+    text-align: center;
+    font-family: Noto Sans TC;
+    font-size: 43.532px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    span {
+      color: #1D9DD0;
+    }
+  }
+  &_button {
+    margin-top: 38px;
+    text-align: center;
   }
 }
