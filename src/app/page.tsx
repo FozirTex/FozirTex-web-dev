@@ -48,8 +48,8 @@ export default function Home() {
           <div className={styles.core_list}>
             <Row gutter={[64, 32]}>
               {coreFunctions.map((value) => (
-                <Col sm={24} md={8}>
-                  <div key={value.title} className={styles.core_list_item}>
+                <Col key={value.title} sm={24} md={8}>
+                  <div className={styles.core_list_item}>
                     <div className={styles.core_list_item_image}><Image src={value.imageUrl} alt={''} /></div>
                     <div className={styles.core_list_item_title}>{value.title}</div>
                     <div className={styles.core_list_item_description}>{value.description}</div>
