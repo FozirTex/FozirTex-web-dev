@@ -1,0 +1,27 @@
+=container
+  max-width: 1360px
+  margin: 0 auto
+  padding-left: 64px
+  padding-right: 64px
+  @include on-mobile()
+    padding-left: 16px
+    padding-right: 16px
+
+// responsive layout
+$mobile: 768px
+$desktop: 1023px
+$wide: 1215px
+$full: 1407px
+
+$max-desktop: 960px
+$max-wide: 1152px
+$max-full: 1344px
+
+@mixin on-desktop($min-width: $mobile + 1)
+  @media screen and (min-width: $min-width)
+    @content
+
+@mixin on-mobile($max-width: $mobile)
+  @media screen and (max-width: $max-width)
+    @content
+
