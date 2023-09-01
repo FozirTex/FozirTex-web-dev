@@ -3,6 +3,27 @@ import appstoreSVG from './appstore.svg'
 import bannerSVG from './banner.svg'
 import Image from "next/image";
 
+import calendarImage from './calendar.png'
+import {Col, Row} from "antd";
+
+const coreFunctions = [
+  {
+    imageUrl: calendarImage,
+    title: '持有場地管理',
+    description: '透過場地管理系統，管理系統場地管理系統系統',
+  },
+  {
+    imageUrl: calendarImage,
+    title: '零打報隊',
+    description: 'Amet non eu elit occaecat commodo excepteur fugiat veniam enim enim ex.',
+  },
+  {
+    imageUrl: calendarImage,
+    title: '快速查找場地',
+    description: 'Tempor labore et magna laborum eiusmod consectetur est cillum.',
+  },
+]
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -19,6 +40,23 @@ export default function Home() {
             <div className={styles.banner_end}>
               <Image src={bannerSVG} alt={''} />
             </div>
+          </div>
+        </div>
+
+        <div className={styles.core}>
+          <h2><span>B</span>ad<span>X</span> 核心功能</h2>
+          <div className={styles.core_list}>
+            <Row gutter={[64, 32]}>
+              {coreFunctions.map((value) => (
+                <Col sm={24} md={8}>
+                  <div key={value.title} className={styles.core_list_item}>
+                    <div className={styles.core_list_item_image}><Image src={value.imageUrl} alt={''} /></div>
+                    <div className={styles.core_list_item_title}>{value.title}</div>
+                    <div className={styles.core_list_item_description}>{value.description}</div>
+                  </div>
+                </Col>
+              ))}
+            </Row>
           </div>
         </div>
 

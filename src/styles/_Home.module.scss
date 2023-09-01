@@ -46,6 +46,53 @@
   }
 }
 
+.core {
+  @include container();
+  padding-top: 128px;
+  padding-bottom: 128px;
+  h2 {
+    text-align: center;
+    color: #000;
+    font-family: Krona One;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    span {
+      color: #1D9DD0;
+    }
+  }
+  &_list {
+    margin-top: 164px;
+    &_item {
+      text-align: center;
+      &_image {
+        img {
+          $size: 180px;
+          width: $size;
+          height: $size;
+        }
+      }
+      &_title {
+        margin-top: 44px;
+        color: #1D9DD0;
+        text-align: center;
+        font-family: Noto Sans TC;
+        font-size: 29.533px;
+        font-weight: 700;
+      }
+      &_description {
+        margin-top: 14px;
+        color: #000;
+        text-align: center;
+        font-family: Noto Sans TC;
+        font-size: 22.15px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
 .download {
   @include container();
   padding: 260px 0;
