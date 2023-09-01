@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import calendarImage from './calendar.png'
 import {Col, Row} from "antd";
+import OutLink from "@/components/Link/OutLink";
 
 const coreFunctions = [
   {
@@ -34,7 +35,7 @@ export default function Home() {
               <h1><span>B</span>ad<span>X</span> App</h1>
               <div className={styles.banner_start_summary}>Ea ea fugiat id proident. Cupidatat excepteur non ullamco fugiat cillum quis id aliquip pariatur duis aute commodo.</div>
               <div className={styles.banner_start_download}>
-                <Image src={appstoreSVG} alt={'Download on the AppStore'} />
+                <OutLink href={'#'}><Image src={appstoreSVG} alt={'Download on the AppStore'} /></OutLink>
               </div>
             </div>
             <div className={styles.banner_end}>
@@ -67,7 +68,7 @@ export default function Home() {
             管理、預約、享受羽球運動！
           </div>
           <div className={styles.download_button}>
-            <Image src={appstoreSVG} alt={'Download on the AppStore'} />
+            <OutLink href={'#'}><Image src={appstoreSVG} alt={'Download on the AppStore'} /></OutLink>
           </div>
         </div>
       </main>
