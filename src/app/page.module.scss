@@ -1,6 +1,6 @@
-@use "@/styles/base/_colors.module.scss" as base;
+@use "@/styles/base/colors.module" as base;
 
-@import "common";
+@import "../styles/common";
 
 .container {
   main {
@@ -10,7 +10,10 @@
 .banner {
   background: linear-gradient(180deg, #CFDDEE 0%, rgba(255, 255, 255, 0.00) 100%);
   padding-top: 164px;
-  //border: 1px solid #9F9F9F;
+  border-bottom: 1px solid #9F9F9F;
+  @include on-mobile() {
+    padding-top: 32px;
+  }
   &_inner {
     @include container();
     display: flex;
@@ -42,7 +45,34 @@
     }
   }
   &_end {
+    @include on-mobile() {
+      display: none;
+    }
+  }
+}
 
+.carousel {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  &_inner {
+    @include container;
+  }
+  &_item {
+    text-align: center;
+    img {
+      display: inline-block !important;
+      //height: 100%;
+      //width: 80%;
+      height: auto;
+      width: 100%;
+      //@include on-mobile() {
+      //  width: 100%;
+      //}
+    }
+  }
+  &_control {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -50,6 +80,13 @@
   @include container();
   padding-top: 128px;
   padding-bottom: 128px;
+  @include on-mobile() {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  border-top: 1px solid #9F9F9F;
+  border-bottom: 1px solid #9F9F9F;
   h2 {
     text-align: center;
     color: #000;
@@ -64,6 +101,9 @@
   }
   &_list {
     margin-top: 164px;
+    @include on-mobile() {
+      margin-top: 64px;
+    }
     &_item {
       text-align: center;
       &_image {
@@ -96,6 +136,9 @@
 .download {
   @include container();
   padding: 260px 0;
+  @include on-mobile() {
+    padding: 64px 0;
+  }
   &_text {
     color: #000;
     text-align: center;

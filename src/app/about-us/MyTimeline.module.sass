@@ -1,0 +1,71 @@
+@use "@/styles/base/_colors.module.scss" as base
+
+@import "src/styles/common"
+
+.container
+  main
+
+.dot
+  $size: 48px
+  //@include on-mobile()
+  //  $size: 24px
+  width: $size
+  height: $size
+  border-radius: $size
+  padding: $size / 4
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+  background-color: #FFF
+  display: flex
+  justify-content: center
+  align-items: center
+  &_inner
+    width: $size
+    height: $size
+    //line-height: 24px
+    color: #FFF
+    border-radius: $size
+    display: flex
+    justify-content: center
+    align-items: center
+    font-weight: 700
+    text-transform: capitalize
+    font-size: 16px
+    @include on-mobile()
+      font-size: 12px
+
+.item
+  position: relative
+  bottom: 20px
+  display: flex
+  //justify-content: center
+  align-items: center
+  padding: 0 32px
+  &_line
+    @include on-mobile()
+      display: none
+    width: 48px
+    height: 2px
+  &_icon
+    @include on-mobile()
+      display: none
+    margin: 0 16px
+    img
+      $size: 32px
+      width: $size
+      height: $size
+  &_text
+    &_header
+      font-size: 18px
+      font-weight: 700
+      @include on-mobile()
+        font-size: 16px
+    &_body
+      //margin-top: 8px
+      font-size: 16px
+      @include on-mobile()
+        font-size: 14px
+
+.last
+  font-size: 48px
+  color: #6d767b
+
