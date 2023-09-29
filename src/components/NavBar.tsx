@@ -13,7 +13,7 @@ export default function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(true); // state to control nav visibility
 
   const toggleNav = () => {
-    setIsNavOpen(!isNavOpen); // Toggle the state value
+    setIsNavOpen((isNavOpen) => !isNavOpen); // Toggle the state value
     console.log("menu opened !");
   };
 
